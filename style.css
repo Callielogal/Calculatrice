@@ -1,0 +1,27 @@
+.main
+{
+   width: 30vw;
+   padding: auto;
+   margin: auto;
+   text-align: center;
+}
+
+button
+{
+    height:5vh;
+    width: 5vh;
+    margin: 1px;
+    font-size:18px;
+    
+}
+
+#text
+{
+    width:11vw;
+}
+
+.equal
+{
+    width:5.6vw;
+    background-color: violet;
+}
