@@ -12,33 +12,33 @@
 <div class="main">
 <input type="text" name="text" id="text">
 <div class="top">
-    <button>CE</button>
-    <button> ←</button>
-    <button>%</button>
-    <button>+</button>
+    <button name="reset" id="reset">CE</button>
+    <button name="back"> ←</button>
+    <button value="%">%</button>
+    <button value="+">+</button>
 </div>
 <div class="minus">
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button>-</button>
+    <button value="7">7</button>
+    <button value="8">8</button>
+    <button value="9">9</button>
+    <button value="-">-</button>
 </div>
 <div class="multiply">
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button>X</button>
+    <button value="4">4</button>
+    <button value="5">5</button>
+    <button value="6">6</button>
+    <button value="*">*</button>
 </div>
 <div class="divide">
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>/</button>
+    <button value="1">1</button>
+    <button value="2">2</button>
+    <button value="3">3</button>
+    <button value="/">/</button>
 </div>
 <div class="bottom">
-    <button>0</button>
-    <button>.</button>
-    <button class="equal">=</button>
+    <button value="0">0</button>
+    <button value=".">.</button>
+    <button value="=" class="equal">=</button>
 </div>
 
 </div>
@@ -47,14 +47,33 @@
 
 <script>
 
-    let num = document.getElementsByTagName("button");
+/* function affichage()
+             {  
+                
+               // console.log(this.textContent);
+     let sum = document.getElementById("buttons");
+     sum.textContent=this.value;
+}
 
-    function insert(num) {
-        
+                 
+                  
+       
+       let buttons = document.getElementsByTagName("button");
+       for(let i = 0; i < buttons.length ; i ++ ) { 
+          buttons[i].addEventListener("click", affichage);
+       }
 
-        
+
+let rset = document.getElementById("reset");
+rset.addEventListener("click", reset);
+
+function reset(){
+    document.getElementById("text").innerHTML = "0"
+    input = ""
+
+           
     }
-
+*/
 
 
 
