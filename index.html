@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+
+<!--
+     .-"-.            .-"-.            .-"-.           .-"-.
+   _/_-.-_\_        _/.-.-.\_        _/.-.-.\_       _/.-.-.\_
+  / __} {__ \      /|( o o )|\      ( ( o o ) )     ( ( o o ) )
+ / //  "  \\ \    | //  "  \\ |      |/  "  \|       |/  "  \|
+/ / \'---'/ \ \  / / \'---'/ \ \      \'/^\'/         \ .-. /
+\ \_/`"""`\_/ /  \ \_/`"""`\_/ /      /`\ /`\         /`"""`\
+ \           /    \           /      /  /|\  \       /       \
+
+-={ see no evil }={ hear no evil }={ speak no evil }={ have no fun }=- -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,71 +20,84 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="main">
+        <div id="output">
+        </div>
 
-<div class="main">
-<input type="text" name="text" id="text">
-<div class="top">
-    <button name="reset" id="reset">CE</button>
-    <button name="back"> ←</button>
-    <button value="%">%</button>
-    <button value="+">+</button>
-</div>
-<div class="minus">
-    <button value="7">7</button>
-    <button value="8">8</button>
-    <button value="9">9</button>
-    <button value="-">-</button>
-</div>
-<div class="multiply">
-    <button value="4">4</button>
-    <button value="5">5</button>
-    <button value="6">6</button>
-    <button value="*">*</button>
-</div>
-<div class="divide">
-    <button value="1">1</button>
-    <button value="2">2</button>
-    <button value="3">3</button>
-    <button value="/">/</button>
-</div>
-<div class="bottom">
-    <button value="0">0</button>
-    <button value=".">.</button>
-    <button value="=" class="equal">=</button>
-</div>
+        <div class="top">
+            <button id="reset">CE</button>
+            <button id="remove">←</button>
+            <button class="button" value="*">*</button>
+            <button class="button" value="/">/</button>
+        </div>
+        <div>
+            <button class="button" value="7">7</button>
+            <button class="button" value="8">8</button>
+            <button class="button" value="9">9</button>
+            <button class="button" value="-">-</button>
+         </div>
 
-</div>
+         <div>
+            <button class="button" value="4">4</button>
+            <button class="button" value="5">5</button>
+            <button class="button" value="6">6</button>
+            <button class="button" value="+">+</button>
+         </div>
+
+         <div>
+            <button class="button" value="1">1</button>
+            <button class="button" value="2">2</button>
+            <button class="button" value="3">3</button>
+            <button class="button" value="-">±</button>
+         </div>
+
+         <div>
+            <button class="button" value="0">0</button>
+            <button class="button" value=".">,</button>
+            <button id="result">=</button>
+        </div>
+      
+    </div>
+    <script>
     
-</body>
+        let input ="";
 
-<script>
-
-/* function affichage()
-             {  
-                
-               // console.log(this.textContent);
-     let sum = document.getElementById("buttons");
-     sum.textContent=this.value;
-}
-
-                 
-                  
-       
-       let buttons = document.getElementsByTagName("button");
-       for(let i = 0; i < buttons.length ; i ++ ) { 
-          buttons[i].addEventListener("click", affichage);
-       }
+        let buttons = document.getElementsByClassName("button");
 
 
-let rset = document.getElementById("reset");
-rset.addEventListener("click", reset);
+        for (let i = 0; i < buttons.length; i++){
+        buttons[i].addEventListener("click", showvalue);
+        }
 
-function reset(){
-    document.getElementById("text").innerHTML = "0"
-}
+        let rset = document.getElementById("reset");
+        rset.addEventListener("click", reset);
 
-function back(){
+        let rmove = document.getElementById("remove");
+        rmove.addEventListener("click", remove);
 
-}
+        let equal = document.getElementById("result")
+        equal.addEventListener("click", domaths)
 
-*/
+        function showvalue(){
+         input = input + this.value;
+
+        document.getElementById("output").innerHTML = input;
+        }
+
+        function domaths(){
+        input = eval(input);
+        document.getElementById("output").innerHTML = input;
+        }
+
+        function reset(){
+        document.getElementById("output").innerHTML = ""
+        input = ""
+        }
+
+        function remove(){
+        input = input.replace(input.slice(-1), "")
+        document.getElementById("output").innerHTML = input;
+        }
+    
+    </script>
+</html>

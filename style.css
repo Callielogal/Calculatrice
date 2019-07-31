@@ -1,27 +1,39 @@
 .main
 {
-   width: 30vw;
-   padding: auto;
+   width: 15vw;
+   padding: 1em;
    margin: auto;
    text-align: center;
+   border: 3px solid black;
+   border-radius: 10px;
+   background-color: lightskyblue;
+}
+
+#output
+{
+height: 2em;
+border: 2px solid black;
+border-radius: 10px;
+margin: 5px auto;
+padding: auto;
+background-color: beige;
 }
 
 button
 {
-    height:5vh;
-    width: 5vh;
+    height:6vh;
+    width: 6vh;
     margin: 1px;
-    font-size:18px;
-    
+    font-size:18px;    
 }
 
-#text
+#input
 {
     width:11vw;
 }
 
-.equal
+#result
 {
-    width:5.6vw;
+    width:6vw;
     background-color: violet;
 }
